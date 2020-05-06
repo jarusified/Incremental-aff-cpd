@@ -28,8 +28,8 @@ find_package(Eigen3 REQUIRED)
 include_directories(${EIGEN3_INCLUDE_DIR})
 
 include_directories(./ffstream_cpp)
-include_directories(../../dim_reduction/streaming-vis-pca)
+include_directories(../../mv-streaming-algorithms/dim_reduction/streaming-vis-pca)
 
 
-pybind11_add_module(ipca_aff_cpd_cpp SHARED ./ffstream_cpp/utils.cpp ./ffstream_cpp/detector.cpp ./ffstream_cpp/fff.cpp ./ffstream_cpp/aff.cpp ./ffstream_cpp/affcd.cpp ../../dim_reduction/streaming-vis-pca/inc_pca.cpp ipca_aff_cpd.cpp ipca_aff_cpd_wrap.cpp)
+pybind11_add_module(ipca_aff_cpd_cpp SHARED ./ffstream_cpp/utils.cpp ./ffstream_cpp/detector.cpp ./ffstream_cpp/fff.cpp ./ffstream_cpp/aff.cpp ./ffstream_cpp/affcd.cpp ../../mv-streaming-algorithms/dim_reduction/streaming-vis-pca/inc_pca.cpp ipca_aff_cpd.cpp ipca_aff_cpd_wrap.cpp)
 
